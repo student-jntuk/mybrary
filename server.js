@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
 //   db.on('error', error => console.error(error))
 //   db.once('open', () => console.log('Connected to Mongoose'))
 
-mongoose.connect(process.env.mongodb_url)
+mongoose.connect(process.env.mongodb_url,{useNewUrlParser: true })
 .then(()=>{
     console.log("mongodb connected sucessfully")
 })
